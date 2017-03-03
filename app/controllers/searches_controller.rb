@@ -14,7 +14,7 @@ class SearchesController < ApplicationController
     @search = DrupalNode.search do
       fulltext term
     end
-    render json: @search[0]
+    render json: @search.results[0]
   end
 
   def new
